@@ -1,5 +1,5 @@
 /*
- * arch/arm/boot/dts/tegra124-platforms/tegra124-laguna-hdmi-pm375-1000-a00.dtsi
+ * arch/arm/boot/dts/tegra124-platforms/tegra124-laguna-hdmi-pm359-1000-a00.dtsi
  *
  * Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
  *
@@ -41,15 +41,15 @@
 					nvidia,out-depth = <24>;
 				};
 				display-timings {
-				      1920x1080-24 {
-						clock-frequency = <148500000>;
-						hactive = <1920>;
-						vactive = <1080>;
-						hfront-porch = <25>;
-						hback-porch = <25>;
-						hsync-len = <25>;
-						vfront-porch = <2>;
-						vback-porch = <2>;
+					640x480-24 {
+						clock-frequency = <25200000>;
+						hactive = <640>;
+						vactive = <480>;
+						hfront-porch = <16>;
+						hback-porch = <48>;
+						hsync-len = <96>;
+						vfront-porch = <10>;
+						vback-porch = <33>;
 						vsync-len = <2>;
 						nvidia,h-ref-to-sync = <1>;
 						nvidia,v-ref-to-sync = <1>;
@@ -72,9 +72,9 @@
 						pclk = <74250000>;
 						pll0 = <0x01003110>;
 						pll1 = <0x00301500>;
-						pe-current = <0x08080808>;
-						drive-current = <0x2d2d2d2d>;
-						peak-current = <0x0>;
+						pe-current = <0x00000000>;
+						drive-current = <0x2c2c2c2c>;
+						peak-current = <0x07070707>;
 						pad-ctls0-mask = <0xfffff0ff>;
 						pad-ctls0-setting = <0x00000400>;
 					};
@@ -83,9 +83,9 @@
 						pclk = <148500000>;
 						pll0 = <0x01003310>;
 						pll1 = <0x00301500>;
-						pe-current = <0x0>;
-						drive-current = <0x2d2d2d2d>;
-						peak-current = <0x05050505>;
+						pe-current = <0x00000000>;
+						drive-current = <0x33333333>;
+						peak-current = <0x0c0c0c0c>;
 						pad-ctls0-mask = <0xfffff0ff>;
 						pad-ctls0-setting = <0x00000400>;
 					};
@@ -108,4 +108,3 @@
 		clock-frequency = <100000>;
 	};
 };
-
